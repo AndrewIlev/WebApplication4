@@ -4,21 +4,14 @@ namespace SupplyManagementSystem.Models
 {
     public class Sposhivachi
     {
-        [Key]
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Adresa { get; set; }
+        public string NazvaOrganizachia { get; set; } = string.Empty;
 
         [Required]
-        public int NomerRahunku { get; set; }
+        public string Adresa { get; set; } = string.Empty;
 
-        [Required]
-        public int KodSposhivacha { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string NazvaOrganizachia { get; set; }
+        public int Telefon { get; set; }
     }
 }

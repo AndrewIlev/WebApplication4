@@ -1,20 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SupplyManagementSystem.Models
+public class Produkti
 {
-    public class Produkti
-    {
-        [Key]
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        [Required]
-        public double Cina { get; set; }
+    [Required]
+    public string NazvaProdukcia { get; set; } = string.Empty;
 
-        [Required]
-        [StringLength(50)]
-        public string NazvaProdukcia { get; set; }
+    [Required]
+    public decimal Price { get; set; }
 
-        [Required]
-        public int KodProdukcia { get; set; }
-    }
+    [Required]
+    public int Quantity { get; set; }
 }

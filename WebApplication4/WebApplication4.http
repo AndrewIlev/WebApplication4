@@ -1,6 +1,29 @@
-@WebApplication4_HostAddress = http://localhost:5037
+### Отримати всіх постачальників
+GET https://localhost:7283/api/Postachannia
 
-GET {{WebApplication4_HostAddress}}/weatherforecast/
-Accept: application/json
+### Отримати конкретного постачальника
+GET https://localhost:7283/api/Postachannia/1
 
-###
+### Додати нового постачальника
+POST https://localhost:7283/api/Postachannia
+Content-Type: application/json
+
+{
+  "name": "Нова постач",
+  "address": "Київ, вул. Хрещатик 1",
+  "phone": "380501234567"
+}
+
+### Оновити постачальника
+PUT https://localhost:7283/api/Postachannia/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Оновлена постач",
+  "address": "Київ, вул. Хрещатик 1",
+  "phone": "380501234567"
+}
+
+### Видалити постачальника
+DELETE https://localhost:7283/api/Postachannia/1
